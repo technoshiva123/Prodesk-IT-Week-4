@@ -45,9 +45,9 @@ async function generateLetter() {
             formData.append('resume', resumeFile);
         }
 
-        const response = await fetch('http://localhost:3000/generate', {
-            method: 'POST',
-            body: formData 
+        const response = await fetch('/generate', {
+        method: 'POST',
+        body: formData 
         });
 
         const data = await response.json();
